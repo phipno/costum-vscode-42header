@@ -13,7 +13,7 @@ import { languageDemiliters } from './delimiters'
 
 export type HeaderInfo = {
   filename: string,
-  author: string,
+  author: phipno,
   createdBy: string,
   createdAt: moment.Moment,
   updatedBy: string,
@@ -24,18 +24,20 @@ export type HeaderInfo = {
  * Template where each field name is prefixed by $ and is padded with _
  */
 const genericTemplate = `
-********************************************************************************
-*                                                                              *
-*                                                         :::      ::::::::    *
-*    $FILENAME__________________________________        :+:      :+:    :+:    *
-*                                                     +:+ +:+         +:+      *
-*    By: $AUTHOR________________________________    +#+  +:+       +#+         *
-*                                                 +#+#+#+#+#+   +#+            *
-*    Created: $CREATEDAT_________ by $CREATEDBY_       #+#    #+#              *
-*    Updated: $UPDATEDAT_________ by $UPDATEDBY_      ###   ########.fr        *
-*                                                                              *
-********************************************************************************
+/*--------------------------------------------------------------------------------------*/    
+/*                                                                                .|    */
+/*     $FILENAME__________________________________    /     (__)          |/            */
+/*                                                          (oo)------/'   ,__,    ,    */
+/*     By: $AUTHOR________________________________       |  (__)     ||    (oo)_____/   */
+/*                                                             ||---/||    (__)    ||   */
+/*     Created: $CREATEDAT_________ by $CREATEDBY_    |/                 ,    ||--w||   */
+/*                                                  ,,       !              |'          */
+/*                                                       ,           ,|             |/  */
+/*----------------8<------------------[ mooooooo ]--------------------------------------*/   
 
+
+
+#.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~  EOF  ~._.~"~.__.~"~._.~"~._.~"~._.~"~._.~"~._.~#
 `.substring(1)
 
 /**
