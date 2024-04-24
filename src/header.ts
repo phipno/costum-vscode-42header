@@ -16,28 +16,26 @@ export type HeaderInfo = {
   author: string,
   createdBy: string,
   createdAt: moment.Moment,
-  updatedBy: string,
-  updatedAt: moment.Moment
 }
 
 /**
  * Template where each field name is prefixed by $ and is padded with _
  */
 const genericTemplate = `
-#*--------------------------------------------------------------------------------------*#
-#*                                                                                .|    *#
-#*     $FILENAME__________________________________    /     (__)          |/            *#
-#*                                                          (oo)------/'   ,__,    ,    *#
-#*     By: $AUTHOR________________________________       |  (__)     ||    (oo)_____/   *#
-#*                                                             ||---/||    (__)    ||   *#
-#*     Created: $CREATEDAT_________ by $CREATEDBY_    |/                 ,    ||--w||   *#
-#*                                                  ,,       !              |'          *#
-#*                                                       ,           ,|             |/  *#
-#*----------------8<------------------[ mooooooo ]--------------------------------------*#
+*--------------------------------------------------------------------------------------*
+*                                                                                .|    *
+*     $FILENAME__________________________________    /     (__)          |/            *
+*                                                          (oo)------/'   ,__,    ,    *
+*     By: $AUTHOR________________________________       |  (__)     ||    (oo)_____/   *
+*                                                             ||---/||    (__)    ||   *
+*     Created: $CREATEDAT_________ by $CREATEDBY_    |/                 ,    ||--w||   *
+*                                                  ,,       !              |'          *
+*                                                       ,           ,|             |/  *
+*----------------8<------------------[ mooooooo ]--------------------------------------*
 
 
 
-#.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~  EOF  ~._.~"~.__.~"~._.~"~._.~"~._.~"~._.~"~._.~#
+*.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~  EOF  ~._.~"~.__.~"~._.~"~._.~"~._.~"~._.~"~._.~*
 `.substring(1)
 
 /**
@@ -122,8 +120,6 @@ export const getHeaderInfo = (header: string): HeaderInfo => ({
   author: getFieldValue(header, 'AUTHOR'),
   createdBy: getFieldValue(header, 'CREATEDBY'),
   createdAt: parseDate(getFieldValue(header, 'CREATEDAT')),
-  updatedBy: getFieldValue(header, 'UPDATEDBY'),
-  updatedAt: parseDate(getFieldValue(header, 'UPDATEDAT'))
 })
 
 /**
@@ -134,8 +130,6 @@ export const renderHeader = (languageId: string, info: HeaderInfo) => [
   { name: 'AUTHOR', value: info.author },
   { name: 'CREATEDAT', value: formatDate(info.createdAt) },
   { name: 'CREATEDBY', value: info.createdBy },
-  { name: 'UPDATEDAT', value: formatDate(info.updatedAt) },
-  { name: 'UPDATEDBY', value: info.updatedBy }
 ].reduce((header, field) =>
   setFieldValue(header, field.name, field.value),
   getTemplate(languageId))
