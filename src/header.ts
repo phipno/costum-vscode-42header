@@ -13,7 +13,7 @@ import { languageDemiliters } from './delimiters'
 
 export type HeaderInfo = {
   filename: string,
-  author: phipno,
+  author: string,
   createdBy: string,
   createdAt: moment.Moment,
   updatedBy: string,
