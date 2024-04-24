@@ -3,8 +3,8 @@
   "displayName": "Cow Header",
   "description": "Cow header for VSCode forked from 42 Header: www.42.fr",
   "version": "0.42.7",
-  "publisher": "pnolte",
-  "icon": "cow.png",
+  "publisher": "phipno",
+  "icon": "cow.jpg",
   "repository": {
     "type": "git",
     "url": "https://github.com/kube/vscode-42header"
@@ -61,7 +61,7 @@
   "devDependencies": {
     "@types/node": "^16.11.16",
     "typescript": "^4.6.2",
-    "vscode": "^1.64.0"
+    "vscode": "^1.0.0"
   },
   "dependencies": {
     "moment": "^2.29.1"
